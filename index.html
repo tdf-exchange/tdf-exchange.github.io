@@ -113,7 +113,7 @@
             const period = periodSelector.value;
             const year = yearSelector.value;
 
-            const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/data/${coin}_${period}_${year}.json`);
+            const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/${coin}_${period}_${year}.json`);
             const data = await response.json();
 
             updateCharts(data);
