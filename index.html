@@ -77,7 +77,7 @@
 
     <script>
         // 配置数据URL基础路径
-        const DATA_BASE_URL = 'https://raw.githubusercontent.com/tdf-exchange/data';
+        const DATA_BASE_URL = 'https://raw.githubusercontent.com/tdf-exchange/data/refs/heads';
         const BRANCH = 'main';  // 或者其他分支名称
 
         // 获取DOM元素
@@ -133,7 +133,7 @@
         // 加载元数据
         async function loadMetadata() {
             try {
-                const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/data/metadata.json`);
+                const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/metadata.json`);
                 const metadata = await response.json();
                 return metadata;
             } catch (error) {
@@ -172,7 +172,7 @@
                 const period = periodSelector.value;
                 const year = yearSelector.value;
 
-                const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/data/${coin}_${period}_${year}.json`);
+                const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/${coin}_${period}_${year}.json`);
                 const rawData = await response.json();
                 
                 // 过滤null值
