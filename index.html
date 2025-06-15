@@ -87,7 +87,7 @@
 
         // 加载元数据
         async function loadMetadata() {
-            const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/data/metadata.json`);
+            const response = await fetch(`${DATA_BASE_URL}/${BRANCH}/metadata.json`);
             const metadata = await response.json();
             return metadata;
         }
